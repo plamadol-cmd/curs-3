@@ -9,8 +9,8 @@ public class AnimalApplicationMain {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        IAnimal theDog = context.getBean("myDog", Dog.class);
-        IAnimal theCat = context.getBean("myCat", Cat.class);
+        IAnimal theDog = context.getBean("myDog", IAnimal.class);
+        IAnimal theCat = context.getBean("myCat", IAnimal.class);
 
         theDog.setAnimalName("Archie");
         theCat.setAnimalName("");
