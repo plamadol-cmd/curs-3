@@ -1,6 +1,8 @@
 package teachers;
 
 public class TeacherFactory {
+    WisdomWordsService wisdomWordsService = new WisdomWordsService();
+    HomeworkService homeworkService = new HomeworkService();
 
     public ITeacher getTeacher(String teacherType){
         if(teacherType == null){
@@ -16,7 +18,7 @@ public class TeacherFactory {
         }
 
         if(teacherType.equalsIgnoreCase("Java")){
-            return new JavaTeacher();
+            return new JavaTeacher(this.wisdomWordsService, this.homeworkService);
         }
 
         return null;

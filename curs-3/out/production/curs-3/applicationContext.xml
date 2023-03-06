@@ -5,6 +5,8 @@
 
     <bean id = "myTeacher"
           class = "teachers.JavaTeacher">
+        <constructor-arg index="0" ref = "myTeacherService" />
+        <constructor-arg index="1" ref = "homeworkService" />
     </bean>
 
     <bean id = "historyTeacher"
@@ -13,6 +15,14 @@
 
     <bean id = "myTeacher1"
           class = "teachers.MathTeacher">
+    </bean>
+
+    <bean id = "homeworkService"
+          class = "teachers.HomeworkService">
+    </bean>
+
+    <bean id = "myTeacherService"
+          class = "teachers.WisdomWordsService">
     </bean>
 
     <bean id = "myDog"
