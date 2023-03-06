@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id = "myTeacher"
+          class = "teachers.JavaTeacher">
+    </bean>
+
+    <bean id = "historyTeacher"
+          class = "teachers.HistoryTeacher">
+    </bean>
+
+    <bean id = "myTeacher1"
+          class = "teachers.MathTeacher">
+    </bean>
+
+    <bean id = "myDog"
+          class = "animals.Dog">
+    </bean>
+
+    <bean id = "myCat"
+          class = "animals.Cat">
+    </bean>
+</beans>
