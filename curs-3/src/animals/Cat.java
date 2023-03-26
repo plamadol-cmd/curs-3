@@ -1,5 +1,8 @@
 package animals;
 
+import org.springframework.stereotype.Component;
+
+@Component("myCat")
 public class Cat implements IAnimal {
     private String catName;
     @Override

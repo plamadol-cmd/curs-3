@@ -1,5 +1,8 @@
 package animals;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Mouse implements IAnimal {
     private String mouseName;
     @Override

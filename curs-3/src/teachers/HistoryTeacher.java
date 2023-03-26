@@ -1,5 +1,8 @@
 package teachers;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class HistoryTeacher implements ITeacher {
     private WisdomWordsService wisdomService;
     @Override

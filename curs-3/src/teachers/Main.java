@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Created Java teacher via Factory pattern: \n" + javaTeacher.getHomework() + "\n");
 
         //use beans
-        ITeacher theTeacher = context.getBean("myTeacher", ITeacher.class);
+        ITeacher theTeacher = context.getBean("javaTeacher", JavaTeacher.class);
         ITeacher historyTeacher = context.getBean("historyTeacher", ITeacher.class);
 
         System.out.println("Java teacher and history teacher as Spring beans:");

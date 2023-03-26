@@ -1,5 +1,8 @@
 package teachers;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class TeacherFactory {
     WisdomWordsService wisdomWordsService = new WisdomWordsService();
     HomeworkService homeworkService = new HomeworkService();
