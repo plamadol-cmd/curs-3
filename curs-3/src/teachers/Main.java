@@ -16,13 +16,19 @@ public class Main {
         System.out.println("Created Java teacher via Factory pattern: \n" + javaTeacher.getHomework() + "\n");
 
         //use beans
-        ITeacher theTeacher = context.getBean("javaTeacher", JavaTeacher.class);
+        ITeacher theTeacher = context.getBean("javaTeacher", ITeacher.class);
         ITeacher historyTeacher = context.getBean("historyTeacher", ITeacher.class);
+        WebDevTeacher webDevTeacher = context.getBean("webDevTeacher", WebDevTeacher.class);
 
-        System.out.println("Java teacher and history teacher as Spring beans:");
+        System.out.println("Java teacher as Spring bean:");
         System.out.println(theTeacher.getHomework());
         System.out.println(theTeacher.getWisdom());
+
+        System.out.println("\nHistory teacher as Spring bean:");
         System.out.println(historyTeacher.getHomework());
+
+        System.out.println("\nWebDevTeacher teacher as Spring bean:");
+        webDevTeacher.printKnowledge();
 
         context.close();
     }

@@ -12,6 +12,7 @@ public class JavaTeacher implements ITeacher {
         this.wisdomService = wisdomService;
         this.homeworkService = homeworkService;
     }
+
     @Override
     public String getHomework() {
         return this.homeworkService.getHomework();
