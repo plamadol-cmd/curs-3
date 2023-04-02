@@ -2,7 +2,7 @@ package teachers;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class HomeworkService {
 
     private String homework = "Do the exercises";

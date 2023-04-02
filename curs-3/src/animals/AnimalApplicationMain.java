@@ -1,19 +1,20 @@
 package animals;
 
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AnimalApplicationMain {
 
     public static void main(String[] args){
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AnimalConfiguration.class);
 
         IAnimal theDog = context.getBean("myDog", IAnimal.class);
-        IAnimal theCat = context.getBean("myCat", IAnimal.class);
+        IAnimal theCat = context.getBean("cat", IAnimal.class);
 
         theDog.setAnimalName("Archie");
-        theCat.setAnimalName("");
+        theCat.setAnimalName("Mimi");
 
         System.out.println(theDog);
         System.out.println(theDog.makeSound());
